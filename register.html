@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/normaliz.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+
+    <!-- ========== Navbar  ========== -->
+
+    <nav class="navbar navbar-expand-lg  fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/Logo/shop-online-store-ecommerce-svgrepo-com.svg" alt="">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="cart.html">Cart </a>
+                    </li>
+                </ul>
+
+                <!-- Btns Register and Login -->
+                <div id="registerBtn" class="registerBtn d-none   ">
+                    <a href="register.html"> Regsiter </a>
+                    <a href="login.html"> Login </a>
+                </div>
+                <!-- Logout -->
+                <button class="btn   btn-sm d-none " type="submit" id="logoutBtn" onclick="logout()">Logout </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== Register ========== -->
+
+    <section class="register">
+        <div class="container">
+            <div class="row shadow rounded-5">
+                <h2>Registetr</h2>
+                <div class="form">
+                    <div class="item">
+                        <label for="userName">Name</label>
+                        <input type="text" placeholder="Your Name" id="userName">
+                        <span class="text-danger d-none" id="nameValid">invalid Name enter more 3 char</span>
+                    </div>
+
+                    <div class="item">
+                        <label for="userEmail">Email</label>
+                        <input type="email" class="emailValidation" placeholder="Your Email" id="userEmail">
+                        <span class="text-danger d-none" id="validEmailRegister">invalid Email enter email valid</span>
+
+                    </div>
+                    <div class="item">
+                        <label for="userPassword">Password</label>
+                        <input type="password" placeholder="Your Password" id="userPassword">
+                        <span class="text-danger d-none" id="validPasswordRegister">invalid Password enter 5 char</span>
+                        <span class="text-danger d-none" id="isExist">Email Is Exist</span>
+                        <span class="text-success d-none" id="successRegister">success</span>
+                    </div>
+
+                    <button id="btnRegister " onclick="register()">Register</button>
+                    <p>Alreedy Have Account ? <a href="login.html">Login </a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
